@@ -1,0 +1,11 @@
+
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/custom/access.log
+  fields:
+    type: nginx-access
+
+output.logstash:
+  hosts: ["logstash:5044"]

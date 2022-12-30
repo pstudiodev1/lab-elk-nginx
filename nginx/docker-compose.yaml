@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  nginx:
+    image: nginx:1.23
+    container_name: nginx
+    restart: always
+    volumes:
+      - ./log:/var/log/nginx
+    ports:
+        - "80:80"
